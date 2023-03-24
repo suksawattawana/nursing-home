@@ -46,10 +46,24 @@
   <br>
        
         <div class="maim-content">
-            <h2 class="text-center"  style="color: #092A4A;">10 แหล่งอาหาร ช่วยบำรุงปอด</h2>	
-            <div class="text-center" style="margin-top: 25px;">
-                <img src="img/test3.jpg" class="pap">
-            </div>
+            <h2 class="text-center"  style="color: #092A4A;">10 แหล่งอาหาร ช่วยบำรุงปอด</h2><br>	
+            <table class="center" >
+              <tr>
+                <th></th>
+                <th></th>
+                <th><div class="box1"></th>
+              </tr>
+              <tr>
+                <th></th>
+                <th><img src="img/test3.jpg" style="width: 30rem;"></th>
+                <th></th>
+              </tr>
+              <tr>
+                <th><div class="box2"></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </table>
             <p style="font-size: 15px;" class="p-5 ">
                 &&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นายแพทย์สุวรรณชัย วัฒนายิ่งเจริญชัย อธิบดีกรมอนามัย กล่าวว่า จากข้อมูลบทความวิชาการที่เผยแพร่ในวารสารต่างประเทศ 
                 พบว่าการปรับวิถีชีวิต เช่น การงดสูบบุหรี่ การออกกำลังกายรวมถึงการกินอาหารที่อุดมไปด้วยสารอาหารสามารถช่วยปกป้องปอด และลดความเสียหายของปอดจากโรค 
@@ -177,6 +191,54 @@ img {
 
 .p-4 {
   padding: 2.5rem !important;
+}
+
+.box1 {
+  height: 60px;
+  width: 60px;
+  background: #DEECF9;
+  margin-left: -40px;
+  margin-bottom: -40px;
+  /* left: 63%;
+  top: -265px;
+  z-index: -1; */
+}
+
+/* .box1 ::before {
+  content: '';
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background: #DEECF9;
+} */
+
+.box2 {
+  height: 60px;
+  width: 60px;
+  background: #DEECF9;
+  margin-right: -40px;
+  margin-top: -40px;
+  /* left: 28%;
+  top: -125px;
+  z-index: -1; */
+}
+
+/* .box2 ::before {
+  content: '';
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background: #DEECF9;
+} */
+
+table, th, td {
+  border: 0px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
 }
 </style>
 </html>
