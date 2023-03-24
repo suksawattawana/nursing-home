@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทดลอง</title>
+    <style type="text/css">
+        div#overlay {
+            display: none;
+            z-index: 2;
+            background: #ccc;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+        }
+        div#specialBox {
+            display: none;
+            z-index: 3;
+            background: #fff;
+            color: #000;
+            position: relative;
+            margin: 100px auto opx auto;
+            width: 500px;
+            height: 400px;
+        }
+        div#main {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding-left: 25px;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        function toggleOverlay(obj) {
+            var overlay = document.getElementById ('overlay')
+            var specialBox = document.getElementById ('specialBox')
+            var specialPicture = document.getElementById ('specialPicture')
+            overlay.style.opacity=.7;
+            if (overlay.style.display=="block") {
+                  overlay.style.display = "none";
+                  specialBox.style.display = "none";
+            } else {
+                  overlay.style.display = "block";
+                  specialBox.style.display = "block";
+                  specialPicture.src = obj.src;
+            }
+          }
+    </script>
+
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="specialBox">
+        <button onmousedown="toggleOverlay(this)">X</button>
+        <img id="specialPicture" src="" width="500px" height="375px"/>
+    </div> 
+
+    <div id="main">
+        <h2>My web page</h2>
+        <img onmousedown="toggleOverlay(this)" src="img/24-1.jpg" width="100px"/>
+        <img onmousedown="toggleOverlay(this)" src="img/24-1.jpg" width="80px"/>
+        <img onmousedown="toggleOverlay(this)" src="img/24-1.jpg" width="80px"/>
+        <img onmousedown="toggleOverlay(this)" src="img/24-1.jpg" width="80px"/>
+    </div>
+</body> 
+</html>
+
+ <!-- <div id="overlay"></div>
+    <div id="specialBox">
+        <button>X</button>
+        <img src="" width="500px" height="375px"/>
+    </div> -->
+
+   
