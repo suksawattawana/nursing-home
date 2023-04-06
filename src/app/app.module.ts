@@ -12,6 +12,8 @@ import { HomeComponent } from './component/content/home/home.component';
 import { CenterprincipleComponent } from './component/content/centerprinciple/centerprinciple.component';
 import { ServicerateComponent } from './component/content/servicerate/servicerate.component';
 import { SymptomreportComponent } from './component/content/symptomreport/symptomreport.component';
+import { OnlinebookingComponent } from './component/content/onlinebooking/onlinebooking.component';
+import { PagenotfoundComponent } from './component/pagenotfound/pagenotfound.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { SymptomreportComponent } from './component/content/symptomreport/sympto
     HomeComponent,
     CenterprincipleComponent,
     ServicerateComponent,
-    SymptomreportComponent
+    SymptomreportComponent,
+    OnlinebookingComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
