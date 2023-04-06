@@ -2,3 +2,17 @@
 .menu-spacer {
     flex: 1 1 auto;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+}
