@@ -1,10 +1,35 @@
-
-<!-- Toolbar -->
-<app-header></app-header>
-
-<div class="content" role="main">
-  <app-home></app-home>
-  <router-outlet></router-outlet>
+<div style="height: 80vh;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <img width="40" alt="Angular Logo" src="../assets/images/logo/logo.svg" />
+      
+      <a href="#" mat-button>ใกล้หมอ เนิสซิ่งโฮม</a>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <a mat-button routerLink="/rout-home">หน้าหลัก</a>
+        <a mat-button routerLink="/rout-centerprinciple">หลักการของศูนย์</a>
+        <a mat-button routerLink="/rout-servicerate">อัตราค่าบริการ</a>
+        <a mat-button routerLink="/rout-home">จองออนไลน์</a>
+        <a mat-button routerLink="/rout-symptomreport">รายงานอาการ</a>
+      </div>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a href="#" mat-list-item>หลักการของศูนย์</a>
+        <a href="#" mat-list-item>อัตราค่าบริการ</a>
+        <a href="#" mat-list-item>จองออนไลน์</a>
+        <a href="#" mat-list-item>รายงานอาการ</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+        <app-home></app-home>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
-
-<app-footer></app-footer>
